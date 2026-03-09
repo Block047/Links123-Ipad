@@ -1,0 +1,848 @@
+/* ─── Reset ───────────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 0px;
+  overflow: hidden;
+}
+
+/* ─── Body ────────────────────────────────────────────────────────────────── */
+
+body {
+  background-color: #1a1c23;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  transition: 0.3s all ease;
+}
+
+/* ─── Theme Classes ───────────────────────────────────────────────────────── */
+
+.favicon-w {
+  background-color: #fff !important;
+}
+
+.white-mode {
+  background-color: #fff;
+  color: #101117;
+}
+
+.beta-style {
+  color: #000;
+  background-color: #fec56b;
+  background-image: url('https://img3.wallspic.com/crops/1/9/2/8/2/128291/128291-pc_game-sky-explosion-minecraft-sunlight-1920x1080.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.old-button {
+  background-color: #007bff !important;
+  color: #fff !important;
+  border: 2px outset !important;
+  border-radius: 6px !important;
+  border-color: black !important;
+  transition: background-color 0.3s, transform 0.2s !important;
+}
+
+.old-button:hover {
+  background-color: #0056b3 !important;
+  transform: translateY(-2px) !important;
+}
+
+.old-input {
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.beta-button {
+  background-color: #f7b562 !important;
+  transition: 0.3s !important;
+}
+
+.beta-button:hover {
+  border: 2px solid #335fff !important;
+}
+
+.beta-button:focus {
+  background-color: #335fff !important;
+}
+
+.beta-button2 {
+  background-color: #f7b562 !important;
+  transition: 0.3s !important;
+}
+
+.beta-button2:hover {
+  background-color: #335fff !important;
+}
+
+.beta-color {
+  background: linear-gradient(135deg, #b2522c 25%, #fed279 100%) !important;
+  transition: 0.3s all ease;
+}
+
+.V2-style {
+  color: #000;
+  background-color: #b9ea48;
+  background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/minecraft-world-scenery-desktop-wallpaper-preview.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.old-button2 {
+  background-color: #007bff !important;
+  color: #fff !important;
+  border: 2px outset !important;
+  border-radius: 6px !important;
+  border-color: black !important;
+  transition: background-color 0.3s, transform 0.2s !important;
+}
+
+.old-button2:hover {
+  background-color: #0056b3 !important;
+  transform: translateY(-2px) !important;
+}
+
+.old-input2 {
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.V2-button {
+  background-color: #2ac8f1 !important;
+  transition: background-color 0.3s, border 0.25s !important;
+}
+
+.V2-button:hover {
+  border: 2px solid #335fff !important;
+}
+
+.V2-button:focus {
+  background-color: #335fff !important;
+}
+
+.V2-button2 {
+  background-color: #2ac8f1 !important;
+  transition: background-color 0.3s !important;
+}
+
+.V2-button2:hover {
+  background-color: #335fff !important;
+}
+
+.V2-color {
+  background: linear-gradient(135deg, #2ac8f1 5%, #a2ecf2 100%) !important;
+  background-color: #4cc3bc !important;
+  transition: 0.3s all ease;
+}
+
+/* ─── Typography ──────────────────────────────────────────────────────────── */
+
+span {
+  color: #335fff;
+  cursor: default;
+}
+
+span2 {
+  color: red;
+  font-family: Tahoma, sans-serif;
+  cursor: default;
+}
+
+h1 {
+  margin: 0;
+  font-size: 50px;
+  font-family: Tahoma, sans-serif;
+  cursor: default;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: Tahoma, sans-serif;
+  cursor: default;
+}
+
+h4 {
+  bottom: 0%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 40%);
+  font-size: 20px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: default;
+}
+
+/* ─── Random Phrase ───────────────────────────────────────────────────────── */
+
+#randomPhrase {
+  margin-top: 36px;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Tahoma, sans-serif;
+  cursor: pointer;
+  transition: color 0.4s, transform 0.3s;
+}
+
+#randomPhrase:hover {
+  transform: scale(1.1);
+  color: #335fff;
+}
+
+#randomPhrase:active {
+  transform: scale(0.95);
+  color: #284ccc;
+}
+
+/* ─── Navbar ──────────────────────────────────────────────────────────────── */
+
+#navbar {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: #101117;
+  z-index: 10;
+}
+
+/* ─── Nav Buttons ─────────────────────────────────────────────────────────── */
+
+.btn-nav {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-nav:hover:not(.active) {
+  background-color: #335fff;
+}
+
+/* ─── Sidenav ─────────────────────────────────────────────────────────────── */
+
+#sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #101117;
+  overflow-x: hidden;
+  padding-top: 75px;
+}
+
+/* ─── Sidebar Buttons ─────────────────────────────────────────────────────── */
+
+.btn-sidebar {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-sidebar:hover:not(.active) {
+  background-color: #335fff;
+}
+
+/* ─── Filter Button ───────────────────────────────────────────────────────── */
+
+.button-f {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #101117;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.25s, transform 0.3s;
+}
+
+.button-f:hover {
+  border: 2px solid #335fff;
+}
+
+.button-f:focus {
+  background-color: #335fff;
+}
+
+/* ─── Filter Dropdown ─────────────────────────────────────────────────────── */
+
+.filters {
+  position: relative;
+  display: inline-block;
+}
+
+.filters-content {
+  display: none;
+  position: absolute;
+  background-color: #101117;
+  min-width: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.filters-content button {
+  width: 100%;
+  height: 50px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #101117;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.filters-content button:hover {
+  background-color: #335fff;
+}
+
+.filters-content button:focus {
+  background-color: #335fff;
+}
+
+.show {
+  display: block;
+}
+
+/* ─── Search Bars ─────────────────────────────────────────────────────────── */
+
+#searchBar-g {
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  width: 40%;
+  border-radius: 6px;
+  border: 0;
+  font-weight: 552;
+  text-align: center;
+  background-color: #101117;
+  outline: 2.5px solid #fff;
+  color: #fff;
+  transition: outline 0.25s;
+}
+
+#searchBar-g:hover {
+  outline: solid 2.5px #335fff;
+}
+
+#searchBar-g:focus {
+  outline: solid 2.5px #335fff;
+}
+
+#searchBar-a {
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  width: 40%;
+  border-radius: 6px;
+  border: 0;
+  font-weight: 552;
+  text-align: center;
+  background-color: #101117;
+  outline: 2.5px solid #fff;
+  color: #fff;
+  transition: outline 0.25s;
+}
+
+#searchBar-a:hover {
+  outline: solid 2.5px #335fff;
+}
+
+#searchBar-a:focus {
+  outline: solid 2.5px #335fff;
+}
+
+/* ─── Settings Input ──────────────────────────────────────────────────────── */
+
+.settings-i {
+  margin-right: 5px;
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  width: 50%;
+  height: 45px;
+  border-radius: 6px;
+  border: 0;
+  font-weight: 552;
+  text-align: center;
+  background-color: #101117;
+  outline: solid 2.5px #fff;
+  color: #fff;
+  transition: outline 0.25s;
+}
+
+.settings-i:hover {
+  outline: solid 2.5px #335fff;
+}
+
+.settings-i:focus {
+  outline: solid 2.5px #335fff;
+}
+
+/* ─── Black Box / Modal ───────────────────────────────────────────────────── */
+
+#black-box {
+  overflow: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #101117;
+  height: 70%;
+  width: 50%;
+  border-radius: 10px;
+}
+
+#blur-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+}
+
+#changes-container {
+  overflow: auto;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  height: 75%;
+  width: 90%;
+  border-radius: 5px;
+  border: 3px solid #fff;
+  background-color: #101117;
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────────────────── */
+
+.button-u {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 17px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 9px 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-u:hover {
+  background-color: #284ccc;
+  transform: scale(1.05);
+}
+
+.button-u:active {
+  background-color: #1e3999;
+  transform: scale(0.95);
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 9px 20px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #284ccc;
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: #1e3999;
+  transform: scale(0.95);
+}
+
+.button2 {
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 9px 20px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button2:hover {
+  background-color: #284ccc;
+  transform: scale(1.1);
+}
+
+.button2:active {
+  background-color: #1e3999;
+  transform: scale(0.95);
+}
+
+.button-x {
+  position: sticky;
+  top: 0%;
+  left: 100%;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-x:hover {
+  background-color: #FF0000;
+}
+
+.button-x:active {
+  background-color: #cc0000;
+}
+
+.button-h {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 3px 9px;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-h:hover {
+  background-color: #284ccc;
+}
+
+.button-h:active {
+  background-color: #1e3999;
+}
+
+#button-c {
+  bottom: 0%;
+  text-decoration: underline 2px;
+  right: 3%;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+#button-c:hover {
+  color: #335fff;
+}
+
+.button-s {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 28%;
+  height: 40px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-s:hover {
+  background-color: #284ccc;
+  transform: scale(1.05);
+}
+
+.button-s:active {
+  background-color: #1e3999;
+  transform: scale(0.95);
+}
+
+.button-a {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 15px 15px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-a:hover {
+  background-color: #284ccc;
+  transform: scale(1.05);
+}
+
+.button-a:active {
+  background-color: #1e3999;
+  transform: scale(0.95);
+}
+
+#button-git {
+  bottom: 0%;
+  text-decoration: underline 2px;
+  left: 3%;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+#button-git:hover {
+  color: #335fff;
+}
+
+/* ─── Theme Buttons ───────────────────────────────────────────────────────── */
+
+#button-dm {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #101117;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 28%;
+  height: 70px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#button-dm:hover { transform: scale(1.05); }
+#button-dm:active { transform: scale(0.95); }
+
+#button-wm {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #fff;
+  color: #101117;
+  border: 2px solid #101117;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 28%;
+  height: 70px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#button-wm:hover { transform: scale(1.05); }
+#button-wm:active { transform: scale(0.95); }
+
+#button-bs {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #fec56b;
+  background-image: url('https://i.imgur.com/wmBGd9Q.png');
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 28%;
+  height: 70px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#button-bs:hover { transform: scale(1.05); }
+#button-bs:active { transform: scale(0.95); }
+
+#button-v2s {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #b9ea48;
+  background-image: url('https://i.imgur.com/M4NSvlN.png');
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 28%;
+  height: 70px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#button-v2s:hover { transform: scale(1.05); }
+#button-v2s:active { transform: scale(0.95); }
+
+/* ─── Favicon Buttons ─────────────────────────────────────────────────────── */
+
+.favicon {
+  padding: 0px 0px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  background-color: #101117;
+  border-radius: 10px;
+  outline: none;
+}
+
+.favicon img {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  background: none;
+  padding: 7px 8px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: border 0.2s, transform 0.3s;
+}
+
+.favicon img:hover {
+  transform: scale(1.05);
+  border: 2px solid #335fff;
+}
+
+.favicon img:active {
+  transform: scale(0.95);
+  border: 2px solid #284ccc;
+}
+
+/* ─── Chapter Buttons ─────────────────────────────────────────────────────── */
+
+.button-ch {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background-color: #335fff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 15%;
+  height: 75px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-ch:hover {
+  background-color: #284ccc;
+  transform: scale(1.05);
+}
+
+.button-ch:active {
+  background-color: #1e3999;
+  transform: scale(0.95);
+}
+
+/* ─── Center Layout ───────────────────────────────────────────────────────── */
+
+#center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ─── Active State ────────────────────────────────────────────────────────── */
+
+.active {
+  background-color: #335fff !important;
+}

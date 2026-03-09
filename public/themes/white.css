@@ -1,0 +1,10 @@
+/* ─── White Theme ─────────────────────────────────────────────────────────── */
+:root {
+  --bg: #fff;
+  --nav-bg: #eee;
+  --text: #101117;
+  --accent: #335fff;
+  --accent-dark: #284ccc;
+  --accent-darker: #1e3999;
+  --font: Tahoma, sans-serif;
+}

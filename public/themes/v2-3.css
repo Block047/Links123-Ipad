@@ -1,0 +1,22 @@
+/* ─── V2.3 Theme ──────────────────────────────────────────────────────────── */
+:root {
+  --bg: #b9ea48;
+  --nav-bg: #4cc3bc;
+  --text: #000;
+  --accent: #2ac8f1;
+  --accent-dark: #335fff;
+  --accent-darker: #284ccc;
+  --font: Tahoma, sans-serif;
+}
+
+body {
+  background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/minecraft-world-scenery-desktop-wallpaper-preview.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#navbar, #sidenav, #black-box, #changes-container {
+  background: linear-gradient(135deg, #2ac8f1 5%, #a2ecf2 100%);
+  background-color: #4cc3bc;
+}

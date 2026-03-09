@@ -1,0 +1,10 @@
+/* ─── Dark Theme (default) ────────────────────────────────────────────────── */
+:root {
+  --bg: #1a1c23;
+  --nav-bg: #101117;
+  --text: #fff;
+  --accent: #335fff;
+  --accent-dark: #284ccc;
+  --accent-darker: #1e3999;
+  --font: Tahoma, sans-serif;
+}

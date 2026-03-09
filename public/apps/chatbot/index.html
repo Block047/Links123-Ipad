@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links123 AI Chatbot</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/IojIBBt.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    <style>
+    :root {
+		--primary-color: #4f7cff;
+		--primary-hover: #3f66d4;
+  		--primary-active: #2f4fb0;
+
+  		--light-bg: #2a2f3a;
+  		--border-color: #3a3f4a;
+
+  		--text-color: #e5e7eb;
+  		--text-light: #9ca3af;
+
+  		--user-msg-bg: #3a4050;
+  		--assistant-msg-bg: #323848;
+	}
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: Tahoma, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+        background-color: #1a1c23;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+	  span {
+  		color: #335fff;
+  		cursor: default;
+	  }
+      h1 {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+      header p { color: #fff; }
+      .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 200px);
+        min-height: 400px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        background-color: var(--light-bg);
+      }
+      .message {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        max-width: 80%;
+      }
+      .message p { white-space: pre-line; margin: 0; overflow-wrap: anywhere; }
+      .user-message { background-color: var(--user-msg-bg); align-self: flex-end; margin-left: auto; }
+      .assistant-message { background-color: var(--assistant-msg-bg); align-self: flex-start; }
+
+      .md-content { overflow-wrap: anywhere; }
+      .md-content p { white-space: pre-line; margin: 0.4em 0; }
+      .md-content p:first-child { margin-top: 0; }
+      .md-content p:last-child  { margin-bottom: 0; }
+      .md-content h1, .md-content h2, .md-content h3, .md-content h4 { margin: 0.75em 0 0.3em; line-height: 1.3; }
+      .md-content ul, .md-content ol { margin: 0.4em 0 0.4em 1.4em; padding: 0; }
+      .md-content li { margin: 0.2em 0; }
+      .md-content pre {
+        background: #1e1e2e; color: #cdd6f4;
+        padding: 0.85em 1em; border-radius: 6px;
+        overflow-x: auto; margin: 0.6em 0;
+        font-size: 0.88em; line-height: 1.5;
+      }
+      .md-content code { font-family: "Fira Code", Consolas, monospace; font-size: 0.88em; }
+      .md-content :not(pre) > code { background: #e8e8f0; padding: 0.15em 0.4em; border-radius: 4px; }
+      .md-content blockquote {
+        border-left: 3px solid var(--primary-color);
+        margin: 0.5em 0; padding: 0.3em 0.8em;
+        color: var(--text-light); background: #f9f9fb;
+        border-radius: 0 4px 4px 0;
+      }
+      .md-content table { border-collapse: collapse; width: 100%; margin: 0.6em 0; font-size: 0.9em; }
+      .md-content th, .md-content td { border: 1px solid var(--border-color); padding: 6px 12px; text-align: left; }
+      .md-content th { background: #f0f0f5; font-weight: 600; }
+      .md-content tr:nth-child(even) td { background: #fafafa; }
+      .md-content a { color: var(--primary-color); text-decoration: underline; }
+      .md-content hr { border: none; border-top: 1px solid var(--border-color); margin: 0.8em 0; }
+      .md-content strong { font-weight: 600; }
+      .md-content em { font-style: italic; }
+      .md-content .katex-display { margin: 0.6em 0; overflow-x: auto; }
+      .md-content .katex { font-size: 1em; }
+
+      .message-input {
+        display: flex;
+        padding: 0.75rem;
+        border-top: 1px solid var(--border-color);
+        background-color: #262b36;
+      }
+      #user-input {
+        flex: 1;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-family: inherit;
+        resize: none;
+        min-height: 44px;
+      }
+      #send-button {
+        margin-left: 0.5rem;
+        padding: 0 1rem;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: Tahoma, sans-serif;
+        font-weight: 552;
+        transition: background-color 0.2s;
+      }
+      #send-button:hover { background-color: var(--primary-hover); }
+      #send-button:active { background-color: var(--primary-active); }
+      #send-button:disabled { background-color: var(--text-light); cursor: not-allowed; }
+
+      .typing-indicator { display: none; font-style: italic; color: var(--text-light); padding: 1rem; background: white; }
+      .typing-indicator.visible { display: block; }
+
+      footer { margin-top: 1rem; text-align: center; font-size: 0.85rem; color: #fff; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><span>Links123</span> Chatbot</h1>
+      <p>Powered by OpenAI</p>
+    </header>
+    <div class="chat-container">
+      <div id="chat-messages" class="chat-messages">
+        <div class="message assistant-message">
+          <div class="md-content">
+            <p>Hello! I'm an AI assistant. How can I help you today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="typing-indicator" id="typing-indicator">AI is thinking...</div>
+      <div class="message-input">
+        <textarea id="user-input" placeholder="Type your message here..." rows="1" autofocus></textarea>
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+    <script>
+      marked.setOptions({ breaks: true, gfm: true });
+    </script>
+    <script src="chat.js"></script>
+  </body>
+</html>
