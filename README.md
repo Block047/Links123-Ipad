@@ -11,9 +11,10 @@ This is simply because many of the games available in the desktop version are no
 - Special Thanks to <a href="https://github.com/Akpo12345">***@Akpo12345***</a> on Github, for helping me, give me games/apps and giving me suggestions for new features.
 
 # Usage
-The ruffle and undertale files are getting corrupted (at least they are not working) so those will have to be obtained manually
-Ruffle can be installed with `npm install @ruffle-rs/ruffle` in which the files will be installed in `node_modules` and should be moved to another location in the project dir.
-The undertale files can be installed by running the following command:
+The ruffle and undertale files are getting corrupted once they are uploaded to git (at least they are not working) so those will have to be obtained manually
+
+Ruffle can be installed with `npm install @ruffle-rs/ruffle` in which the files will be installed in `node_modules` and should be moved to `/public/resources/ruffle` with `cp -r node_modules/@ruffle-rs/ruffle/ resources/ruffle`
+The undertale files can be installed by running the following command, and should be installed in `public/games/undertale`:
 ```
 wget https://www.autistici.org/burnedprojects/UNDERTALE/runner.data
 wget https://www.autistici.org/burnedprojects/UNDERTALE/runner.js
