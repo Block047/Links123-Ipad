@@ -33,6 +33,14 @@ interface ChatMessage {
   content: string;
 }
 
+/// ─── COOP/COEP Headers (required for WebAssembly SharedArrayBuffer) ────────────
+
+app.use('/games/undertale', (req, res, next) => {
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+  res.setHeader('Cross-Origin-Embedder-Policy', 'credentialless');
+  next();
+});
+
 // ─── Static Assets ─────────────────────────────────────────────────────────────
 
 app.use(express.static(path.join(__dirname, "../public")));
@@ -98,10 +106,13 @@ app.post("/api/chat", async (req: Request, res: Response) => {
 
 // ─── Catch-all ─────────────────────────────────────────────────────────────────
 
-app.get(/^(?!\/api).*$/, (_req: Request, res: Response) => {
+app.get(/^(?!\/api).*$/, (_req: Request, res: Response, next) => {
+  const ext = path.extname(_req.path);
+  if (ext && ext !== '.html') {
+    return next();
+  }
   res.sendFile(path.join(__dirname, "../public", "index.html"));
 });
-
 // ─── Start ─────────────────────────────────────────────────────────────────────
 
 app.listen(PORT, () => {
