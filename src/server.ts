@@ -11,7 +11,7 @@ app.use(express.json());
 
 // ─── Config ────────────────────────────────────────────────────────────────────
 
-const MODEL_ID = process.env.MODEL_ID ?? "openai/gpt-oss-120b ";
+const MODEL_ID = process.env.MODEL_ID ?? "llama-3.3-70b-versatile";
 const GROQ_API_KEY = process.env.GROQ_API_KEY ?? "";
 const PORT = process.env.PORT ?? 3000;
 
