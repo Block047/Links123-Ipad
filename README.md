@@ -16,10 +16,10 @@ Ruffle can be installed with `npm install @ruffle-rs/ruffle` in which the files 
 The undertale files can be installed by running the following command:
 ```
 wget https://www.autistici.org/burnedprojects/UNDERTALE/runner.data
-https://www.autistici.org/burnedprojects/UNDERTALE/runner.js
-https://www.autistici.org/burnedprojects/UNDERTALE/runner.wasm
-https://www.autistici.org/burnedprojects/UNDERTALE/audio-worklet.js
-https://www.autistici.org/burnedprojects/UNDERTALE/game.unx
-https://www.autistici.org/burnedprojects/UNDERTALE/index.html
-https://www.autistici.org/burnedprojects/UNDERTALE/favicon.png
+wget https://www.autistici.org/burnedprojects/UNDERTALE/runner.js
+wget https://www.autistici.org/burnedprojects/UNDERTALE/runner.wasm
+wget https://www.autistici.org/burnedprojects/UNDERTALE/audio-worklet.js
+wget https://www.autistici.org/burnedprojects/UNDERTALE/game.unx
+wget https://www.autistici.org/burnedprojects/UNDERTALE/index.html
+wget https://www.autistici.org/burnedprojects/UNDERTALE/favicon.png
 ```
