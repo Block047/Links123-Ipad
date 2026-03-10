@@ -1,0 +1,34 @@
+"filename", "language", "JSON", "Markdown", "JavaScript", "JSON with Comments", "TypeScript", "HTML", "XML", "PostCSS", "WebAssembly Text Format", "comment", "blank", "total"
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/README.md", "Markdown", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 3, 11
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/package-lock.json", "JSON", 1469, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1470
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/package.json", "JSON", 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 25
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/apps/chatbot/chat.js", "JavaScript", 0, 0, 175, 0, 0, 0, 0, 0, 0, 43, 31, 249
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/apps/chatbot/index.html", "HTML", 0, 0, 0, 0, 0, 163, 0, 0, 0, 0, 8, 171
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/base.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 708, 0, 20, 120, 848
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/henrystickmin/breakingthebank.html", "HTML", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/henrystickmin/escapingtheprisongame.html", "HTML", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/henrystickmin/flash_crossingthepit.html", "HTML", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/henrystickmin/fleeing_the_complex.html", "HTML", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/henrystickmin/infiltratingtheairshipgame.html", "HTML", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/henrystickmin/stealingthediamondgame.html", "HTML", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/uno/README.md", "Markdown", 0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 30, 112
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/uno/css/style.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 273, 0, 5, 61, 339
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/uno/index.html", "HTML", 0, 0, 0, 0, 0, 65, 0, 0, 0, 6, 1, 72
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/uno/js/app.js", "JavaScript", 0, 0, 666, 0, 0, 0, 0, 0, 0, 129, 142, 937
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/games/uno/play-here-uno.svg", "XML", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/index.html", "HTML", 0, 0, 0, 0, 0, 112, 0, 0, 0, 6, 9, 127
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/main.js", "JavaScript", 0, 0, 624, 0, 0, 0, 0, 0, 0, 9, 16, 649
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/themes/beta.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/themes/dark.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 9, 0, 1, 0, 10
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/themes/v2-3.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 19, 0, 1, 2, 22
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/public/themes/white.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 9, 0, 1, 0, 10
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/561335dccec212b7a8b7.wasm", "WebAssembly Text Format", 0, 0, 0, 0, 0, 0, 0, 0, 212493, 0, 6109, 218602
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/687410817eb08c8ce981.wasm", "WebAssembly Text Format", 0, 0, 0, 0, 0, 0, 0, 0, 219198, 0, 6909, 226107
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/README.md", "Markdown", 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 18, 58
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/core.ruffle.aece3fc8d93bd72f0b9b.js", "JavaScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 2
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/core.ruffle.c2f59d79f129cb64b56a.js", "JavaScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 2
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/package.json", "JSON", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/resources/ruffle/ruffle.js", "JavaScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 2
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/src/server.ts", "TypeScript", 0, 0, 0, 0, 81, 0, 0, 0, 0, 6, 23, 110
+"/home/loganvillar/Documents/Stuff/Development/WebDev/Links123-Ipad/tsconfig.json", "JSON with Comments", 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 16
+"Total", "-", 1494, 130, 1468, 16, 81, 478, 1, 1018, 431691, 230, 13509, 450116

@@ -5,14 +5,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node --experimental-specifier-resolution=node dist/server.js",
-  "dev": "tsx watch src/server.ts",
-  "build": "tsc"
+    "start": "node --experimental-specifier-resolution=node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ruffle-rs/ruffle": "^0.2.0-nightly.2026.3.10",
     "@types/express": "^5.0.6",
     "@types/node": "^25.4.0",
     "dotenv": "^17.3.1",

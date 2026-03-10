@@ -36,6 +36,7 @@ interface ChatMessage {
 // ─── Static Assets ─────────────────────────────────────────────────────────────
 
 app.use(express.static(path.join(__dirname, "../public")));
+app.use('/resources', express.static('resources'));
 
 // ─── Chat API Route ────────────────────────────────────────────────────────────
 
