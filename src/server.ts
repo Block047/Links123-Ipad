@@ -119,3 +119,9 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`Using model: ${MODEL_ID}`);
 });
+
+import { initTunnel } from "./tunnel.js";
+
+if (process.env.ENABLE_TUNNEL === "true") {
+  initTunnel();
+}
