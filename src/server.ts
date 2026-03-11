@@ -9,6 +9,13 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.removeHeader('X-Frame-Options');
+  res.setHeader('Content-Security-Policy', '');
+  next();
+});
+
+
 // ─── Config ────────────────────────────────────────────────────────────────────
 
 const MODEL_ID = process.env.MODEL_ID ?? "llama-3.3-70b-versatile";
