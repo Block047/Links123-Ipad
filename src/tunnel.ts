@@ -49,7 +49,7 @@ function startTunnel(): void {
     const output = data.toString();
     process.stdout.write(`[pinggy] ${output}`);
 
-    const match = output.match(/https:\/\/[a-zA-Z0-9\-]+\.a\.pinggy\.io/);
+    const match = output.match(/https:\/\/[a-zA-Z0-9\-]+\.a\.free\.pinggy\.link/);
     if (match) {
       const url = match[0];
       console.log(`[tunnel] Detected URL: ${url}`);
