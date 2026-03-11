@@ -60,9 +60,11 @@ function startTunnel(): void {
   tunnelProcess.stdout?.on("data", handleOutput);
   tunnelProcess.stderr?.on("data", handleOutput);
 
-  tunnelProcess.on("exit", (code) => {
-    console.log(`[tunnel] Tunnel exited with code ${code}`);
-  });
+tunnelProcess.on("exit", (code) => {
+  console.log(`[tunnel] Tunnel exited with code ${code}`);
+  console.log("[tunnel] Restarting in 3 seconds...");
+  setTimeout(startTunnel, 3000);
+});
 }
 
 // ─── Kill Tunnel ────────────────────────────────────────────────────────────────
