@@ -247,6 +247,7 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  setInterval(ping, 5000);
   var phrases = [
     "Welcome to Links123, the perfect site that collects games and apps from other websites! Links123 has the best games to keep you entertained at school or at home! So relax and enjoy the collection of games and apps the site compiles every once in a while.",
     "Made by ???!",
@@ -647,3 +648,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   phraseElement.addEventListener('click', changeText);
 });
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwcKLS57fGeq9pCiQeDhIote-Bo1ekzjOLQL9bTIzPqx35cdxZWEJP3ln6CjjW4x18g/exec";
+
+async function ping() {
+  const timeout = 5000;
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    await fetch(window.location.origin + '/main.js', {
+      signal: controller.signal,
+      cache: 'no-store'
+    });
+    clearTimeout(id);
+  } catch (err) {
+    clearTimeout(id);
+    console.error("Tunnel dead, redirecting...");
+    window.location.href = GOOGLE_SCRIPT_URL;
+  }
+}
