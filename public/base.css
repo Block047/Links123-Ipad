@@ -4,6 +4,11 @@
   width: 0px;
   overflow: hidden;
 }
+    
+input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
 
 /* ─── Body ────────────────────────────────────────────────────────────────── */
 
@@ -13,14 +18,9 @@ body {
   text-align: center;
   color: #fff;
   user-select: none;
-  transition: 0.3s all ease;
 }
 
 /* ─── Theme Classes ───────────────────────────────────────────────────────── */
-
-.favicon-w {
-  background-color: #fff !important;
-}
 
 .white-mode {
   background-color: #fff;
@@ -83,7 +83,6 @@ body {
 
 .beta-color {
   background: linear-gradient(135deg, #b2522c 25%, #fed279 100%) !important;
-  transition: 0.3s all ease;
 }
 
 .V2-style {
@@ -143,19 +142,133 @@ body {
 .V2-color {
   background: linear-gradient(135deg, #2ac8f1 5%, #a2ecf2 100%) !important;
   background-color: #4cc3bc !important;
-  transition: 0.3s all ease;
 }
+
+.sunset {
+  color: #fff;
+  background: linear-gradient(90deg, #b2522c 15%, #feb779 100%) !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+     }
+     
+.sunset-button {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  transition: background-color 0.3s, transform 0.2s !important;
+     }
+    
+.sunset-button:hover {
+  background-color: #335fff  !important;
+     }
+     
+.sunset-input{
+  background-color: transparent !important;
+  outline: 2.5px solid #fff !important;
+  color: #fff !important;
+  transition: outline 0.25s , background-color 0.3s !important;
+     }
+     
+.sunset-input:hover {
+  outline: solid 2.5px #335fff !important;
+     }
+     
+.sunset-input:focus { 
+  background-color: #345fff !important;
+  outline: solid 2.5px #fff !important;
+     }
+     
+.sunset-button2 {
+  background-color: #f7b562 !important;;
+  transition: 0.3s !important;
+     }
+
+.sunset-button2:hover{
+  border: 2px solid #335fff !important;
+     }
+     
+.sunset-button2:focus {
+  background-color: #335fff !important;
+     }
+     
+.sunset-button3 {
+  background-color: #f7b562 !important;
+  transition: 0.3s !important;
+     }
+     
+.sunset-button3:hover{
+  background-color: #335fff !important;
+     }
+     
+.sunset-color {
+  background: linear-gradient(130deg, #d06433 25%, #b2522c 100%) !important;
+     }
+     
+.blue-sky {
+  background: linear-gradient(90deg, #00c8fc 0%, #a0e7fa 50%) !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+     }
+     
+.blue-sky-button {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  transition: background-color 0.3s, transform 0.2s !important;
+     }
+    
+.blue-sky-button:hover {
+  background-color: #335fff  !important;
+     }
+     
+.blue-sky-input{
+  background-color: transparent !important;
+  outline: 2.5px solid #fff !important;
+  color: #fff !important;
+  transition: outline 0.25s , background-color 0.3s !important;
+     }
+     
+.blue-sky-input:hover {
+  outline: solid 2.5px #335fff !important;
+     }
+     
+.blue-sky-input:focus { 
+  background-color: #345fff !important;
+  outline: solid 2.5px #fff !important;
+     }
+     
+.blue-sky-button2 {
+  background-color: #2ac8f1 !important;
+  transition: background-color 0.3s, border 0.25s, !important;
+     }
+
+.blue-sky-button2:hover{
+  border: 2px solid #335fff !important;
+     }
+     
+.blue-sky-button2:focus {
+  background-color: #335fff !important;
+     }
+     
+.blue-sky-button3 {
+  background-color: #2ac8f1 !important;
+  transition: background-color 0.3s, !important;
+     }
+     
+.blue-sky-button3:hover{
+  background-color: #335fff !important;
+     }
+     
+.blue-sky-color {
+  background: linear-gradient(135deg, #a0e7fa 0%, #82e5ff 100%) !important;
+     }
 
 /* ─── Typography ──────────────────────────────────────────────────────────── */
 
 span {
   color: #335fff;
-  cursor: default;
-}
-
-span2 {
-  color: red;
-  font-family: Tahoma, sans-serif;
   cursor: default;
 }
 
@@ -391,32 +504,6 @@ h4 {
   outline: solid 2.5px #335fff;
 }
 
-/* ─── Settings Input ──────────────────────────────────────────────────────── */
-
-.settings-i {
-  margin-right: 5px;
-  font-family: Tahoma, sans-serif;
-  font-size: 15px;
-  width: 50%;
-  height: 45px;
-  border-radius: 6px;
-  border: 0;
-  font-weight: 552;
-  text-align: center;
-  background-color: #101117;
-  outline: solid 2.5px #fff;
-  color: #fff;
-  transition: outline 0.25s;
-}
-
-.settings-i:hover {
-  outline: solid 2.5px #335fff;
-}
-
-.settings-i:focus {
-  outline: solid 2.5px #335fff;
-}
-
 /* ─── Black Box / Modal ───────────────────────────────────────────────────── */
 
 #black-box {
@@ -585,25 +672,6 @@ h4 {
   background-color: #1e3999;
 }
 
-#button-c {
-  bottom: 0%;
-  text-decoration: underline 2px;
-  right: 3%;
-  position: absolute;
-  font-size: 18px;
-  font-weight: 552;
-  font-family: Tahoma, sans-serif;
-  border: none;
-  border-radius: 10px;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color 0.4s, color 0.4s;
-}
-
-#button-c:hover {
-  color: #335fff;
-}
-
 .button-s {
   margin-left: 5px;
   margin-right: 5px;
@@ -655,25 +723,6 @@ h4 {
 .button-a:active {
   background-color: #1e3999;
   transform: scale(0.95);
-}
-
-#button-git {
-  bottom: 0%;
-  text-decoration: underline 2px;
-  left: 3%;
-  position: absolute;
-  font-size: 18px;
-  font-weight: 552;
-  font-family: Tahoma, sans-serif;
-  border: none;
-  border-radius: 10px;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color 0.4s, color 0.4s;
-}
-
-#button-git:hover {
-  color: #335fff;
 }
 
 /* ─── Theme Buttons ───────────────────────────────────────────────────────── */
@@ -738,8 +787,8 @@ h4 {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-#button-bs:hover { transform: scale(1.05); }
-#button-bs:active { transform: scale(0.95); }
+#button-bsky:hover { transform: scale(1.05); }
+#button-bsky:active { transform: scale(0.95); }
 
 #button-v2s {
   margin-left: 5px;
@@ -763,72 +812,47 @@ h4 {
 
 #button-v2s:hover { transform: scale(1.05); }
 #button-v2s:active { transform: scale(0.95); }
-
-/* ─── Favicon Buttons ─────────────────────────────────────────────────────── */
-
-.favicon {
-  padding: 0px 0px;
-  margin: 5px;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  background-color: #101117;
-  border-radius: 10px;
-  outline: none;
-}
-
-.favicon img {
-  width: 30px;
-  height: 30px;
-  outline: none;
-  background: none;
-  padding: 7px 8px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  transition: border 0.2s, transform 0.3s;
-}
-
-.favicon img:hover {
-  transform: scale(1.05);
-  border: 2px solid #335fff;
-}
-
-.favicon img:active {
-  transform: scale(0.95);
-  border: 2px solid #284ccc;
-}
-
-/* ─── Chapter Buttons ─────────────────────────────────────────────────────── */
-
-.button-ch {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 25px;
+    
+#button-s {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
   font-weight: 552;
   font-family: Tahoma, sans-serif;
-  background-color: #335fff;
+  background: linear-gradient(90deg, #b2522c -10%, #feb779 100%);
   color: #fff;
-  border: none;
+  border: 2px solid #000;
   border-radius: 6px;
   cursor: pointer;
-  width: 15%;
-  height: 75px;
+  width: 28%;
+  height: 70px;
+  margin-top: 20px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.button-ch:hover {
-  background-color: #284ccc;
-  transform: scale(1.05);
+#button-s:hover { transform: scale(1.05); }
+#button-s:active { transform: scale(0.95); }
+    
+#button-bsky {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 552;
+  font-family: Tahoma, sans-serif;
+  background: linear-gradient(90deg, #a0e7fa 0%, #82e5ff 100%) !important;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 28%;
+  height: 70px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.button-ch:active {
-  background-color: #1e3999;
-  transform: scale(0.95);
-}
-
+#button-s:hover { transform: scale(1.05); }
+#button-s:active { transform: scale(0.95); }
+    
 /* ─── Center Layout ───────────────────────────────────────────────────────── */
 
 #center {
