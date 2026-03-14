@@ -18,7 +18,6 @@
       <button id="button-g" class="btn-nav" onclick="openGames()">Games</button>
       <button id="button-a" class="btn-nav" onclick="openApps()">Apps</button>
       <button id="button-st" class="btn-nav" onclick="openSettings()">Settings</button>
-      <button id="button-cl" class="btn-nav" onclick="openChangelog()">Changelog</button>
     </div>
 
     <!-- Home -->
@@ -28,8 +27,8 @@
         <h3 id="randomPhrase">undefined</h3>
         <button class="button-u" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSeW3pK_meY1Vl9dcO27svDgOayJfpDsWi1O8zypT4lqWSTgSA/viewform?usp=publish-editor'">Suggestion</button>
       </div>
+      <h2>IMPORTANT: The url resets every 60 minutes, therefore when experiencing issues, please go back to the google script to recieve the new link.</h2>
       <h4>Ipad Edition</h4>
-      <h5>IMPORTANT: The url resets every 60 minutes, therefore when experiencing issues, please go back to the google script to recieve the new link.</h5>
     </div>
 
     <!-- Games -->
@@ -82,16 +81,15 @@
       <button onclick="location.href='games/henrystickmin/fleeing_the_complex.html'" class="button">Fleeing The Complex</button>
       <button onclick="location.href='games/catstd3/index.html'" class="button">Cats TD 3</button>
       <button onclick="location.href='games/snowrider3d/index.html'" class="button">Snow Rider 3D</button>
-      <h2>More games coming soon!! (or never!!)</h2>
     </div>
 
     <!-- Apps -->
     <div id="apps" style="display: none">
       <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 9px;">All Apps</h3>
-      <input id="searchBar-a" onkeyup="search_button_a()" type="text" name="search" placeholder="uhh.." autocomplete="off">
+      <input id="searchBar-a" onkeyup="search_button_a()" type="text" name="search" placeholder="Search Apps???" autocomplete="off">
       <br>
-      <button onclick="location.href='https://html-4-15231050.codehs.me/'" class="button">Chatroom</button>
-      <button onclick="location.href='apps/chatbot/index.html'" class="button">Chatbot</button>
+      <button onclick="location.href='https://html-4-15231050.codehs.me/'" class="button2">Chatroom</button>
+      <button onclick="location.href='apps/chatbot/index.html'" class="button2">Links123 Chatbot</button>
     </div>
 
     <!-- Settings -->
@@ -108,20 +106,9 @@
         <br>
         <button id="button-bs" onclick="betaStyle()">Beta Style</button>
         <button id="button-v2s" onclick="V2Style()">V2.3 Style</button>
-      </div>
-    </div>
-
-    <!-- Changelog -->
-    <div id="changelog" style="display: none;">
-      <h3 style="position: absolute; left: 50%; top: 16%; transform: translate(-50%, -50%); margin: 0; font-size: 40px; font-family: Tahoma, sans-serif; cursor: default">Update 5 2/4/26</h3>
-      <div id="changes-container">
-        <h2 style="color:white">
-          <li>7 new games</li>
-          <br>
-          <li>Minimal changes</li>
-          <br>
-          <li>Suggestion button (I have no ideas)</li>
-        </h2>
+        <br>
+        <button id="button-s" onclick="sunSet()">Sunset</button>
+        <button id="button-bsky" onclick="blueSky()">Blue Sky</button>
       </div>
     </div>
 
