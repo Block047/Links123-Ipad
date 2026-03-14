@@ -74,176 +74,500 @@ function showThemes() {
   document.querySelector('#button-t').classList.add('active');
   var button = document.querySelectorAll('');
   button.forEach((color) => { color.classList.remove('active'); });
-}
-
-// Changelog
-function openChangelog() {
-  document.querySelector('#changelog').style.display = "block";
-  var display = document.querySelectorAll('#home, #games, #apps, #settings');
-  display.forEach((none) => { none.style.display = "none"; });
-  document.querySelector('#button-cl').classList.add('active');
-  var button = document.querySelectorAll('#button-h, #button-g, #button-a, #button-st');
-  button.forEach((color) => { color.classList.remove('active'); });
-}
-
-// The 4 themes you can choose from
+}  
+      
+// The themes
 function darkMode() {
   document.body.classList.remove('white-mode');
-  var favicon = document.querySelectorAll('.favicon img');
-  favicon.forEach((button) => { button.classList.remove('favicon-w'); });
   document.body.classList.remove('beta-style');
-  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton.forEach((button) => { button.classList.remove('old-button'); });
-  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput.forEach((input) => { input.classList.remove('old-input'); });
+  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton.forEach((button) => {
+  button.classList.remove('old-button'); });
+  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput.forEach((input) => {
+  input.classList.remove('old-input'); });
   var betaButton = document.querySelectorAll('.button-f');
-  betaButton.forEach((button) => { button.classList.remove('beta-button'); });
-  var betaButton2 = document.querySelectorAll('.filters-content button, favicon');
-  betaButton2.forEach((button) => { button.classList.remove('beta-button2'); });
-  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  betaColor.forEach((color) => { color.classList.remove('beta-color'); });
+  betaButton.forEach((button) => {
+  button.classList.remove('beta-button'); });
+  var betaButton2 = document.querySelectorAll('.filters-content button');
+  betaButton2.forEach((button) => {
+  button.classList.remove('beta-button2'); });
+  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  betaColor.forEach((color) => {
+  color.classList.remove('beta-color'); });
   document.body.classList.remove('V2-style');
-  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton2.forEach((button) => { button.classList.remove('old-button2'); });
-  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput2.forEach((input2) => { input2.classList.remove('old-input2'); });
+  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton2.forEach((button) => {
+  button.classList.remove('old-button2'); });
+  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput2.forEach((input2) => {
+  input2.classList.remove('old-input2'); });
   var v2Button = document.querySelectorAll('.button-f');
-  v2Button.forEach((button) => { button.classList.remove('V2-button'); });
+  v2Button.forEach((button) => {
+  button.classList.remove('V2-button'); });
   var v2Button2 = document.querySelectorAll('.filters-content button');
-  v2Button2.forEach((button) => { button.classList.remove('V2-button2'); });
-  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  v2Color.forEach((color) => { color.classList.remove('V2-color'); });
+  v2Button2.forEach((button) => {
+  button.classList.remove('V2-button2'); });
+  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  v2Color.forEach((color) => {
+  color.classList.remove('V2-color'); });
+  document.body.classList.remove('sunset');    
+  var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  sunSetButton.forEach((button) => {
+  button.classList.remove('sunset-button'); });
+  var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  sunSetInput.forEach((input) => {
+  input.classList.remove('sunset-input'); });
+  var sunSetButton2 = document.querySelectorAll('.button-f');
+  sunSetButton2.forEach((button) => {
+  button.classList.remove('sunset-button2'); });
+  var sunSetButton3 = document.querySelectorAll('.filters-content button');
+  sunSetButton3.forEach((button) => {
+  button.classList.remove('sunset-button3'); });
+  var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  sunSetColor.forEach((color) => {
+  color.classList.remove('sunset-color'); });
+  document.body.classList.remove('blue-sky');    
+  var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  blueSkyButton.forEach((button) => {
+  button.classList.remove('blue-sky-button'); });
+  var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  blueSkyInput.forEach((input) => {
+  input.classList.remove('blue-sky-input'); });
+  var blueSkyButton2 = document.querySelectorAll('.button-f');
+  blueSkyButton2.forEach((button) => {
+  button.classList.remove('blue-sky-button2'); });
+  var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+  blueSkyButton3.forEach((button) => {
+  button.classList.remove('blue-sky-button3'); });
+  var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  blueSkyColor.forEach((color) => {
+  color.classList.remove('blue-sky-color'); });
   localStorage.setItem('theme', 'dark');
 }
-
+     
 function whiteMode() {
   document.body.classList.add('white-mode');
-  var favicon = document.querySelectorAll('.favicon img');
-  favicon.forEach((button) => { button.classList.remove('favicon-w'); });
   document.body.classList.remove('beta-style');
-  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton.forEach((button) => { button.classList.remove('old-button'); });
-  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput.forEach((input) => { input.classList.remove('old-input'); });
+  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton.forEach((button) => {
+  button.classList.remove('old-button'); });
+  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput.forEach((input) => {
+  input.classList.remove('old-input'); });
   var betaButton = document.querySelectorAll('.button-f');
-  betaButton.forEach((button) => { button.classList.remove('beta-button'); });
-  var betaButton2 = document.querySelectorAll('.filters-content button, favicon');
-  betaButton2.forEach((button) => { button.classList.remove('beta-button2'); });
-  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  betaColor.forEach((color) => { color.classList.remove('beta-color'); });
+  betaButton.forEach((button) => {
+  button.classList.remove('beta-button'); });
+  var betaButton2 = document.querySelectorAll('.filters-content button');
+  betaButton2.forEach((button) => {
+  button.classList.remove('beta-button2'); });
+  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  betaColor.forEach((color) => {
+  color.classList.remove('beta-color'); });
   document.body.classList.remove('V2-style');
-  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton2.forEach((button) => { button.classList.remove('old-button2'); });
-  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput2.forEach((input2) => { input2.classList.remove('old-input2'); });
+  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton2.forEach((button) => {
+  button.classList.remove('old-button2'); });
+  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput2.forEach((input2) => {
+  input2.classList.remove('old-input2'); });
   var v2Button = document.querySelectorAll('.button-f');
-  v2Button.forEach((button) => { button.classList.remove('V2-button'); });
+  v2Button.forEach((button) => {
+  button.classList.remove('V2-button'); });
   var v2Button2 = document.querySelectorAll('.filters-content button');
-  v2Button2.forEach((button) => { button.classList.remove('V2-button2'); });
-  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  v2Color.forEach((color) => { color.classList.remove('V2-color'); });
+  v2Button2.forEach((button) => {
+  button.classList.remove('V2-button2'); });
+  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  v2Color.forEach((color) => {
+  color.classList.remove('V2-color'); });
+  document.body.classList.remove('sunset');    
+  var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  sunSetButton.forEach((button) => {
+  button.classList.remove('sunset-button'); });
+  var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  sunSetInput.forEach((input) => {
+  input.classList.remove('sunset-input'); });
+  var sunSetButton2 = document.querySelectorAll('.button-f');
+  sunSetButton2.forEach((button) => {
+  button.classList.remove('sunset-button2'); });
+  var sunSetButton3 = document.querySelectorAll('.filters-content button');
+  sunSetButton3.forEach((button) => {
+  button.classList.remove('sunset-button3'); });
+  var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  sunSetColor.forEach((color) => {
+  color.classList.remove('sunset-color'); });
+  document.body.classList.remove('blue-sky');    
+  var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  blueSkyButton.forEach((button) => {
+  button.classList.remove('blue-sky-button'); });
+  var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  blueSkyInput.forEach((input) => {
+  input.classList.remove('blue-sky-input'); });
+  var blueSkyButton2 = document.querySelectorAll('.button-f');
+  blueSkyButton2.forEach((button) => {
+  button.classList.remove('blue-sky-button2'); });
+  var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+  blueSkyButton3.forEach((button) => {
+  button.classList.remove('blue-sky-button3'); });
+  var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  blueSkyColor.forEach((color) => {
+  color.classList.remove('blue-sky-color'); });
   localStorage.setItem('theme', 'white');
 }
-
+     
 function betaStyle() {
   document.body.classList.add('beta-style');
-  var favicon = document.querySelectorAll('.favicon img');
-  favicon.forEach((button) => { button.classList.add('favicon-w'); });
-  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton.forEach((button) => { button.classList.add('old-button'); });
-  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput.forEach((input) => { input.classList.add('old-input'); });
+  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton.forEach((button) => {
+  button.classList.add('old-button'); });
+  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput.forEach((input) => {
+  input.classList.add('old-input'); });
   var betaButton = document.querySelectorAll('.button-f');
-  betaButton.forEach((button) => { button.classList.add('beta-button'); });
-  var betaButton2 = document.querySelectorAll('.filters-content button, favicon');
-  betaButton2.forEach((button) => { button.classList.add('beta-button2'); });
-  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  betaColor.forEach((color) => { color.classList.add('beta-color'); });
+  betaButton.forEach((button) => {
+  button.classList.add('beta-button'); });
+  var betaButton2 = document.querySelectorAll('.filters-content button');
+  betaButton2.forEach((button) => {
+  button.classList.add('beta-button2'); });
+  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  betaColor.forEach((color) => {
+  color.classList.add('beta-color'); });
   document.body.classList.remove('white-mode');
   document.body.classList.remove('V2-style');
-  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton2.forEach((button) => { button.classList.remove('old-button2'); });
-  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput2.forEach((input2) => { input2.classList.remove('old-input2'); });
+  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton2.forEach((button) => {
+  button.classList.remove('old-button2'); });
+  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput2.forEach((input2) => {
+  input2.classList.remove('old-input2'); });
   var v2Button = document.querySelectorAll('.button-f');
-  v2Button.forEach((button) => { button.classList.remove('V2-button'); });
+  v2Button.forEach((button) => {
+  button.classList.remove('V2-button'); });
   var v2Button2 = document.querySelectorAll('.filters-content button');
-  v2Button2.forEach((button) => { button.classList.remove('V2-button2'); });
-  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  v2Color.forEach((color) => { color.classList.remove('V2-color'); });
+  v2Button2.forEach((button) => {
+  button.classList.remove('V2-button2'); });
+  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  v2Color.forEach((color) => {
+  color.classList.remove('V2-color'); });
+  document.body.classList.remove('sunset');    
+  var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  sunSetButton.forEach((button) => {
+  button.classList.remove('sunset-button'); });
+  var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  sunSetInput.forEach((input) => {
+  input.classList.remove('sunset-input'); });
+  var sunSetButton2 = document.querySelectorAll('.button-f');
+  sunSetButton2.forEach((button) => {
+  button.classList.remove('sunset-button2'); });
+  var sunSetButton3 = document.querySelectorAll('.filters-content button');
+  sunSetButton3.forEach((button) => {
+  button.classList.remove('sunset-button3'); });
+  var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  sunSetColor.forEach((color) => {
+  color.classList.remove('sunset-color'); });
+  document.body.classList.remove('blue-sky');    
+  var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  blueSkyButton.forEach((button) => {
+  button.classList.remove('blue-sky-button'); });
+  var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  blueSkyInput.forEach((input) => {
+  input.classList.remove('blue-sky-input'); });
+  var blueSkyButton2 = document.querySelectorAll('.button-f');
+  blueSkyButton2.forEach((button) => {
+  button.classList.remove('blue-sky-button2'); });
+  var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+  blueSkyButton3.forEach((button) => {
+  button.classList.remove('blue-sky-button3'); });
+  var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  blueSkyColor.forEach((color) => {
+  color.classList.remove('blue-sky-color'); });
   localStorage.setItem('theme', 'beta');
 }
-
+     
 function V2Style() {
-  document.body.classList.add('V2-style');
-  var favicon = document.querySelectorAll('.favicon img');
-  favicon.forEach((button) => { button.classList.add('favicon-w'); });
-  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton2.forEach((button) => { button.classList.add('old-button2'); });
-  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput2.forEach((input2) => { input2.classList.add('old-input2'); });
+  document.body.classList.add('V2-style');    
+  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton2.forEach((button) => {
+  button.classList.add('old-button2'); });
+  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput2.forEach((input2) => {
+  input2.classList.add('old-input2'); });
   var v2Button = document.querySelectorAll('.button-f');
-  v2Button.forEach((button) => { button.classList.add('V2-button'); });
+  v2Button.forEach((button) => {
+  button.classList.add('V2-button'); });
   var v2Button2 = document.querySelectorAll('.filters-content button');
-  v2Button2.forEach((button) => { button.classList.add('V2-button2'); });
-  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  v2Color.forEach((color) => { color.classList.add('V2-color'); });
-  document.body.classList.remove('beta-style');
-  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-  oldButton.forEach((button) => { button.classList.remove('old-button'); });
-  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-  oldInput.forEach((input) => { input.classList.remove('old-input'); });
-  var betaButton = document.querySelectorAll('.button-f');
-  betaButton.forEach((button) => { button.classList.remove('beta-button'); });
-  var betaButton2 = document.querySelectorAll('.filters-content button, favicon');
-  betaButton2.forEach((button) => { button.classList.remove('beta-button2'); });
-  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-  betaColor.forEach((color) => { color.classList.remove('beta-color'); });
+  v2Button2.forEach((button) => {
+  button.classList.add('V2-button2'); });
+  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  v2Color.forEach((color) => {
+  color.classList.add('V2-color'); });
   document.body.classList.remove('white-mode');
+  document.body.classList.remove('beta-style');
+  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton.forEach((button) => {
+  button.classList.remove('old-button'); });
+  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput.forEach((input) => {
+  input.classList.remove('old-input'); });
+  var betaButton = document.querySelectorAll('.button-f');
+  betaButton.forEach((button) => {
+  button.classList.remove('beta-button'); });
+  var betaButton2 = document.querySelectorAll('.filters-content button');
+  betaButton2.forEach((button) => {
+  button.classList.remove('beta-button2'); });
+  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  betaColor.forEach((color) => {
+  color.classList.remove('beta-color'); });
+  document.body.classList.remove('sunset');    
+  var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  sunSetButton.forEach((button) => {
+  button.classList.remove('sunset-button'); });
+  var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  sunSetInput.forEach((input) => {
+  input.classList.remove('sunset-input'); });
+  var sunSetButton2 = document.querySelectorAll('.button-f');
+  sunSetButton2.forEach((button) => {
+  button.classList.remove('sunset-button2'); });
+  var sunSetButton3 = document.querySelectorAll('.filters-content button');
+  sunSetButton3.forEach((button) => {
+  button.classList.remove('sunset-button3'); });
+  var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  sunSetColor.forEach((color) => {
+  color.classList.remove('sunset-color'); });
+  document.body.classList.remove('blue-sky');    
+  var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  blueSkyButton.forEach((button) => {
+  button.classList.remove('blue-sky-button'); });
+  var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  blueSkyInput.forEach((input) => {
+  input.classList.remove('blue-sky-input'); });
+  var blueSkyButton2 = document.querySelectorAll('.button-f');
+  blueSkyButton2.forEach((button) => {
+  button.classList.remove('blue-sky-button2'); });
+  var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+  blueSkyButton3.forEach((button) => {
+  button.classList.remove('blue-sky-button3'); });
+  var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  blueSkyColor.forEach((color) => {
+  color.classList.remove('blue-sky-color'); });
   localStorage.setItem('theme', 'v2');
 }
 
-window.onload = function () {
+function sunSet() {
+  document.body.classList.add('sunset');    
+  var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  sunSetButton.forEach((button) => {
+  button.classList.add('sunset-button'); });
+  var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  sunSetInput.forEach((input) => {
+  input.classList.add('sunset-input'); });
+  var sunSetButton2 = document.querySelectorAll('.button-f');
+  sunSetButton2.forEach((button) => {
+  button.classList.add('sunset-button2'); });
+  var sunSetButton3 = document.querySelectorAll('.filters-content button');
+  sunSetButton3.forEach((button) => {
+  button.classList.add('sunset-button3'); });
+  var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  sunSetColor.forEach((color) => {
+  color.classList.add('sunset-color'); });
+  document.body.classList.remove('white-mode');
+  document.body.classList.remove('beta-style');
+  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton.forEach((button) => {
+  button.classList.remove('old-button'); });
+  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput.forEach((input) => {
+  input.classList.remove('old-input'); });
+  var betaButton = document.querySelectorAll('.button-f');
+  betaButton.forEach((button) => {
+  button.classList.remove('beta-button'); });
+  var betaButton2 = document.querySelectorAll('.filters-content button');
+  betaButton2.forEach((button) => {
+  button.classList.remove('beta-button2'); });
+  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  betaColor.forEach((color) => {
+  color.classList.remove('beta-color'); });
+  document.body.classList.remove('V2-style');
+  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton2.forEach((button) => {
+  button.classList.remove('old-button2'); });
+  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput2.forEach((input2) => {
+  input2.classList.remove('old-input2'); });
+  var v2Button = document.querySelectorAll('.button-f');
+  v2Button.forEach((button) => {
+  button.classList.remove('V2-button'); });
+  var v2Button2 = document.querySelectorAll('.filters-content button');
+  v2Button2.forEach((button) => {
+  button.classList.remove('V2-button2'); });
+  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  v2Color.forEach((color) => {
+  color.classList.remove('V2-color'); });
+  document.body.classList.remove('blue-sky');    
+  var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  blueSkyButton.forEach((button) => {
+  button.classList.remove('blue-sky-button'); });
+  var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  blueSkyInput.forEach((input) => {
+  input.classList.remove('blue-sky-input'); });
+  var blueSkyButton2 = document.querySelectorAll('.button-f');
+  blueSkyButton2.forEach((button) => {
+  button.classList.remove('blue-sky-button2'); });
+  var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+  blueSkyButton3.forEach((button) => {
+  button.classList.remove('blue-sky-button3'); });
+  var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  blueSkyColor.forEach((color) => {
+  color.classList.remove('blue-sky-color'); });
+  localStorage.setItem('theme', 'sunset');
+}
+      
+function blueSky() {
+  document.body.classList.add('blue-sky');    
+  var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  blueSkyButton.forEach((button) => {
+  button.classList.add('blue-sky-button'); });
+  var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  blueSkyInput.forEach((input) => {
+  input.classList.add('blue-sky-input'); });
+  var blueSkyButton2 = document.querySelectorAll('.button-f');
+  blueSkyButton2.forEach((button) => {
+  button.classList.add('blue-sky-button2'); });
+  var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+  blueSkyButton3.forEach((button) => {
+  button.classList.add('blue-sky-button3'); });
+  var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  blueSkyColor.forEach((color) => {
+  color.classList.add('blue-sky-color'); });
+  document.body.classList.remove('white-mode');
+  document.body.classList.remove('beta-style');
+  var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton.forEach((button) => {
+  button.classList.remove('old-button'); });
+  var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput.forEach((input) => {
+  input.classList.remove('old-input'); });
+  var betaButton = document.querySelectorAll('.button-f');
+  betaButton.forEach((button) => {
+  button.classList.remove('beta-button'); });
+  var betaButton2 = document.querySelectorAll('.filters-content button');
+  betaButton2.forEach((button) => {
+  button.classList.remove('beta-button2'); });
+  var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  betaColor.forEach((color) => {
+  color.classList.remove('beta-color'); });
+  document.body.classList.remove('V2-style');
+  var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  oldButton2.forEach((button) => {
+  button.classList.remove('old-button2'); });
+  var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  oldInput2.forEach((input2) => {
+  input2.classList.remove('old-input2'); });
+  var v2Button = document.querySelectorAll('.button-f');
+  v2Button.forEach((button) => {
+  button.classList.remove('V2-button'); });
+  var v2Button2 = document.querySelectorAll('.filters-content button');
+  v2Button2.forEach((button) => {
+  button.classList.remove('V2-button2'); });
+  var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  v2Color.forEach((color) => {
+  color.classList.remove('V2-color'); });
+  document.body.classList.remove('sunset');    
+  var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+  sunSetButton.forEach((button) => {
+  button.classList.remove('sunset-button'); });
+  var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+  sunSetInput.forEach((input) => {
+  input.classList.remove('sunset-input'); });
+  var sunSetButton2 = document.querySelectorAll('.button-f');
+  sunSetButton2.forEach((button) => {
+  button.classList.remove('sunset-button2'); });
+  var sunSetButton3 = document.querySelectorAll('.filters-content button');
+  sunSetButton3.forEach((button) => {
+  button.classList.remove('sunset-button3'); });
+  var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+  sunSetColor.forEach((color) => {
+  color.classList.remove('sunset-color'); });
+  localStorage.setItem('theme', 'bluesky');
+}
+     
+window.onload = function() {
   const theme = localStorage.getItem('theme');
   if (theme === 'white') {
-    document.body.classList.add('white-mode');
+     document.body.classList.add('white-mode');
   }
   if (theme === 'beta') {
-    document.body.classList.add('beta-style');
-    var favicon = document.querySelectorAll('.favicon img');
-    favicon.forEach((button) => { button.classList.add('favicon-w'); });
-    var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-    oldButton.forEach((button) => { button.classList.add('old-button'); });
-    var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-    oldInput.forEach((input) => { input.classList.add('old-input'); });
-    var betaButton = document.querySelectorAll('.button-f');
-    betaButton.forEach((button) => { button.classList.add('beta-button'); });
-    var betaButton2 = document.querySelectorAll('.filters-content button, favicon');
-    betaButton2.forEach((button) => { button.classList.add('beta-button2'); });
-    var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-    betaColor.forEach((color) => { color.classList.add('beta-color'); });
+     document.body.classList.add('beta-style');
+     var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+     oldButton.forEach((button) => {
+     button.classList.add('old-button'); });
+     var oldInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+     oldInput.forEach((input) => {
+     input.classList.add('old-input'); });
+     var betaButton = document.querySelectorAll('.button-f');
+     betaButton.forEach((button) => {
+     button.classList.add('beta-button'); });
+     var betaButton2 = document.querySelectorAll('.filters-content button');
+     betaButton2.forEach((button) => {
+     button.classList.add('beta-button2'); });
+     var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     betaColor.forEach((color) => {
+     color.classList.add('beta-color'); });
   }
   if (theme === 'v2') {
-    document.body.classList.add('V2-style');
-    var favicon = document.querySelectorAll('.favicon img');
-    favicon.forEach((button) => { button.classList.add('favicon-w'); });
-    var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
-    oldButton2.forEach((button) => { button.classList.add('old-button2'); });
-    var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
-    oldInput2.forEach((input2) => { input2.classList.add('old-input2'); });
+    document.body.classList.add('V2-style');    
+    var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+    oldButton2.forEach((button) => {
+    button.classList.add('old-button2'); });
+    var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a');
+    oldInput2.forEach((input2) => {
+    input2.classList.add('old-input2'); });
     var v2Button = document.querySelectorAll('.button-f');
-    v2Button.forEach((button) => { button.classList.add('V2-button'); });
+    v2Button.forEach((button) => {
+    button.classList.add('V2-button'); });
     var v2Button2 = document.querySelectorAll('.filters-content button');
-    v2Button2.forEach((button) => { button.classList.add('V2-button2'); });
-    var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
-    v2Color.forEach((color) => { color.classList.add('V2-color'); });
+    v2Button2.forEach((button) => {
+    button.classList.add('V2-button2'); });
+    var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box');
+    v2Color.forEach((color) => {
+    color.classList.add('V2-color'); });
   }
-  if (localStorage.getItem("panickey")) document.querySelector("#panickey").value = localStorage.getItem("panickey");
-  if (localStorage.getItem("panicurl")) document.querySelector("#panicurl").value = localStorage.getItem("panicurl");
-  document.addEventListener('keydown', async (e) => {
-    if (localStorage.getItem('panickey') && localStorage.getItem('panickey') == e.key)
-      window.parent.window.location.replace(localStorage.getItem('panicurl') || 'https://classroom.google.com/h');
-  });
+  if (theme === 'sunset') {
+    document.body.classList.add('sunset');    
+    var sunSetButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+    sunSetButton.forEach((button) => {
+    button.classList.add('sunset-button'); });
+    var sunSetInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+    sunSetInput.forEach((input) => {
+    input.classList.add('sunset-input'); });
+    var sunSetButton2 = document.querySelectorAll('.button-f');
+    sunSetButton2.forEach((button) => {
+    button.classList.add('sunset-button2'); });
+    var sunSetButton3 = document.querySelectorAll('.filters-content button');
+    sunSetButton3.forEach((button) => {
+    button.classList.add('sunset-button3'); });
+    var sunSetColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+    sunSetColor.forEach((color) => {
+    color.classList.add('sunset-color'); });
+  } 
+  if (theme === 'bluesky') {
+    document.body.classList.add('blue-sky');    
+    var blueSkyButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-h, .button-x');
+    blueSkyButton.forEach((button) => {
+    button.classList.add('blue-sky-button'); });
+    var blueSkyInput = document.querySelectorAll('#searchBar-g, #searchBar-a');
+    blueSkyInput.forEach((input) => {
+    input.classList.add('blue-sky-input'); });
+    var blueSkyButton2 = document.querySelectorAll('.button-f');
+    blueSkyButton2.forEach((button) => {
+    button.classList.add('blue-sky-button2'); });
+    var blueSkyButton3 = document.querySelectorAll('.filters-content button');
+    blueSkyButton3.forEach((button) => {
+    button.classList.add('blue-sky-button3'); });
+    var blueSkyColor = document.querySelectorAll('#navbar, #sidenav, #black-box');
+    blueSkyColor.forEach((color) => {
+    color.classList.add('blue-sky-color'); });
+  }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
