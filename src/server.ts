@@ -77,7 +77,7 @@ app.post("/api/chat", async (req: Request, res: Response) => {
       body: JSON.stringify({
         model: MODEL_ID,
         messages,
-        max_tokens: 32768,
+        max_tokens: 1024,,
         stream: true,
       }),
     });
